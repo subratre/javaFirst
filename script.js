@@ -60,9 +60,22 @@ const resturant = {
         console.log(
             `Ordered Received! ${this.starterMenu[starterIndex]} and ${ this.mainMenu[mainIndex]}`
         );
+    },
+    orderPasta: function( ing1, ing2, ing3)
+    {
+        console.log(` Here is your delicious pasta with ${ing1}, ${ing2}, ${ing3}`);
     }
 };
  
+const ingredints = [
+    prompt(" Let's make pasta! Ingredients 1?"), 
+    prompt(" Ingredients 2!"), 
+    prompt(" Ingredients 3!")
+];
+
+console.log(ingredints);
+
+resturant.orderPasta( ...ingredints);
 
 resturant.orderDelivery({
     time: '22:30',
@@ -71,6 +84,7 @@ resturant.orderDelivery({
     starterIndex: 2
 })
 console.log(resturant);
+
 
 const newarr = ['subrat', 'panda', 'srikanta', 'manoj'];
 
@@ -116,7 +130,22 @@ console.log(o, ccc);
 
 // spread operator
 
+const arr = [ 7, 8, 9];
+const badNewarr = [1,2, arr[0], arr[1], arr[2]];
 
+console.log(badNewarr);
+
+const newrty = [2, 5, 6, 8];
+const newparttwo = [4, 5, 6, ...newrty];
+console.log(newparttwo);
+
+const newMenu = [ ...resturant.mainMenu, 'tomato'];
+console.log(newMenu);
+
+const str = 'subrat';
+
+const letters = [ ...str,' ','S.'];
+console.log(letters);
 
 
 
